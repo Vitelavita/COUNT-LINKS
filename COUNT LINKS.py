@@ -1,5 +1,5 @@
-import urllib
-from BeautifulSoup import *
+import urllib.request
+from bs4 import BeautifulSoup
 
 count = int(input("enter count: "))
 position= int(input("enter position: "))
@@ -8,7 +8,7 @@ number2 = 0
 
 url = "http://python-data.dr-chuck.net/known_by_Calah.html"
 print (url)
-html = urllib.urlopen(url).read()
+html = urllib.request.urlopen(url).read()
 
 while number<count:
 	number = 0
@@ -19,5 +19,5 @@ while number<count:
 		while number2 < position:
 			url = tag.get("href", None)
 			print (url)
-			html = urllib.urlopen(url).read()
+			html = urllib.request.urlopen(url).read()
 			number2 +=1
