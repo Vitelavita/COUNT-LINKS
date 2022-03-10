@@ -14,4 +14,4 @@ for tag in tags:
 	stringnumber = tag.contents
 	number= int(stringnumber[0-1])
 	count = count+ number
-print (count)
+print(count)
